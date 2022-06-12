@@ -1,4 +1,4 @@
-[![GitHub repo size](https://img.shields.io/github/size/gciziks/LeagueInternationalData?style=flat-square)](https://img.shields.io/github/repo-size/gciziks/lol-international-ranking?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/gciziks/lol-international-ranking)
 # League Of Legends International Region Ranking
 
 League Analysis is a Python app for dealing with region performances calculations and to compare them faster and easier. Data always updated based on [Leaguepedia](https://lol.fandom.com/wiki/League_of_Legends_Esports_Wiki)
