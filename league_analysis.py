@@ -38,7 +38,7 @@ def input_handler():
     if not args.debug:
         sys.tracebacklimit = 0
     
-    valid_msi_years = list(np.arange(2015,datetime.now().year))
+    valid_msi_years = list(np.arange(2015,datetime.now().year + 1))
     valid_worlds_years = list(np.arange(2014,datetime.now().year))
 
     if args.msi not in valid_msi_years or args.worlds not in valid_worlds_years:
@@ -104,7 +104,8 @@ class ScrapeLeague:
             years = list(np.arange(self.worlds_start_year,self.current_year))
             type_event = True
         elif event == 'MSI':
-            years = list(np.arange(self.msi_start_year,self.current_year))
+            years = list(np.arange(self.msi_start_year,self.current_year + 1))
+
             type_event = False
         return years,type_event
     
@@ -189,7 +190,7 @@ class ScoreResults:
         self.duplicates = []
         event_list = self.df['Championship'].unique()
         self.dict_df = {event: {} for event in event_list}
-        self.valid_msi = list(np.arange(msi_start,datetime.now().year))
+        self.valid_msi = list(np.arange(msi_start,datetime.now().year + 1))
         self.valid_worlds = list(np.arange(worlds_start,datetime.now().year))
 
         
